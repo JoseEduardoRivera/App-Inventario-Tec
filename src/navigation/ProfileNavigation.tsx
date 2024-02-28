@@ -2,11 +2,11 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { ProfileScreen } from "../screens";
 
-export type StackParams = {
+export type ProfileParams = {
   ProfileScreen: undefined;
 };
 
-const Stack = createStackNavigator<StackParams>();
+const Stack = createStackNavigator<ProfileParams>();
 
 export const ProfileNavigation = () => {
   return (

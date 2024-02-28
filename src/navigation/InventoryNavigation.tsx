@@ -2,13 +2,13 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { CategoryScreen, HomeScreen, ProductScreen } from "../screens";
 
-export type StackParams = {
+export type InventoryParams = {
   HomeScreen: undefined;
   CategoryScreen: undefined;
   ProductScreen: undefined;
 };
 
-const Stack = createStackNavigator<StackParams>();
+const Stack = createStackNavigator<InventoryParams>();
 
 export const InventoryNavigation = () => {
   return (
