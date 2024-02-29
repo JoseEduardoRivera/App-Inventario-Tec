@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { ApiScreen } from "../screens";
 import { InventoryNavigation } from "./InventoryNavigation";
 import { ProfileNavigation } from "./ProfileNavigation";
+import { Ionicons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -11,15 +12,39 @@ export const BottomNavigation = () => {
     <Tab.Navigator
       initialRouteName="Home"
       sceneContainerStyle={{
-        padding: 20,
+        paddingTop: 25,
       }}
       screenOptions={{
         headerShown: false,
       }}
     >
-      <Tab.Screen name="Home" component={InventoryNavigation} />
-      <Tab.Screen name="Api" component={ApiScreen} />
-      <Tab.Screen name="Profile" component={ProfileNavigation} />
+      <Tab.Screen
+        name="Home"
+        component={InventoryNavigation}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Api"
+        component={ApiScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="earth-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileNavigation}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person" size={size} color={color} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 };

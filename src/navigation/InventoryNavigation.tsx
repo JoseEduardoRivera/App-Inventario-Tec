@@ -1,10 +1,11 @@
 // ScreensNavigation.tsx
 import { createStackNavigator } from "@react-navigation/stack";
 import { CategoryScreen, HomeScreen, ProductScreen } from "../screens";
+import { Category } from "../interfaces/category-interface";
 
 export type InventoryParams = {
   HomeScreen: undefined;
-  CategoryScreen: undefined;
+  CategoryScreen: { category: Category };
   ProductScreen: undefined;
 };
 
