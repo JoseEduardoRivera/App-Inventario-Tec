@@ -2,11 +2,12 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { CategoryScreen, HomeScreen, ProductScreen } from "../screens";
 import { Category } from "../interfaces/category-interface";
+import { UniqueProductData } from "../interfaces/product-interface";
 
 export type InventoryParams = {
   HomeScreen: undefined;
   CategoryScreen: { category: Category };
-  ProductScreen: undefined;
+  ProductScreen: { product: UniqueProductData };
 };
 
 const Stack = createStackNavigator<InventoryParams>();

@@ -21,16 +21,6 @@ export function ProductsComponent({ products }: Props) {
       )}
       renderItem={({ item }) => (
         <ProductComponent product={item} key={item.id} />
-        // <View
-        //   key={item.id}
-        //   style={{
-        //     width: screenWidth / 2,
-        //     padding: 8,
-        //     backgroundColor: "red",
-        //   }}
-        // >
-        //   <Text style={{ color: "white" }}>{item.attributes.nombre}</Text>
-        // </View>
       )}
     />
   );

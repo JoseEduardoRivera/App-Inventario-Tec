@@ -5,7 +5,7 @@ export interface UniqueProduct {
     meta: Meta;
 }
 
-interface UniqueProductData {
+export interface UniqueProductData {
     id:         number;
     attributes: PurpleAttributes;
 }
