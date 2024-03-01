@@ -10,7 +10,7 @@ export interface UniqueProductData {
     attributes: PurpleAttributes;
 }
 
-interface PurpleAttributes {
+export interface PurpleAttributes {
     nombre:      string;
     descripcion: string;
     disponible:  boolean;

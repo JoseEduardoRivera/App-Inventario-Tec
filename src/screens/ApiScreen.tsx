@@ -1,6 +1,7 @@
 import { View, Text, Button } from "react-native";
 import React from "react";
 import { userContext } from "../context/userContext";
+import { RegisterComponent } from "../components";
 
 export function ApiScreen() {
   const { user, closeSession } = userContext((state) => ({
@@ -11,18 +12,15 @@ export function ApiScreen() {
   const showLogoutButton = user.user && user.user.id !== 0;
 
   return (
-    <View
-      style={{
-        alignItems: "center",
-        justifyContent: "center",
-        alignContent: "center",
-      }}
-    >
+    <View style={{}}>
       <Text>ApiScreen</Text>
 
       {showLogoutButton && (
         <Button onPress={closeSession} title="Cerrar sesion" />
       )}
+      <View>
+        <RegisterComponent />
+      </View>
     </View>
   );
 }
